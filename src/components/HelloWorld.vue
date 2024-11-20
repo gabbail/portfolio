@@ -26,7 +26,7 @@
             </template>
 
             <template #title>
-              <h2 class="text-h5 font-weight-bold">Get started</h2>
+              <h2 class="text-h5 font-weight-bold">Get started!</h2>
             </template>
 
             <template #subtitle>

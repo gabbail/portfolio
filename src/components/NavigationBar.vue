@@ -1,6 +1,10 @@
 <template>
-  <v-app-bar app color="teal-darken-4">
-    <v-toolbar-title>My Portfolio</v-toolbar-title>
+  <v-app-bar
+    floating
+    flat
+    :style="{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }"
+  >
+    <v-toolbar-title class="name">Gabriel Baillargeon</v-toolbar-title>
 
     <v-spacer></v-spacer>
 
@@ -31,4 +35,14 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+
+.name {
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 50px;
+}
+</style>

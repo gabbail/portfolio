@@ -1,38 +1,30 @@
 <template>
-  <v-app-bar
-    floating
-    flat
-    :style="{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }"
-  >
+  <v-app-bar floating flat>
     <v-toolbar-title class="name">Gabriel Baillargeon</v-toolbar-title>
 
     <v-spacer></v-spacer>
 
-    <v-btn text @click="goToHome">Home</v-btn>
-    <v-btn text @click="goToAbout">About</v-btn>
-    <v-btn text @click="goToProjects">Projects</v-btn>
-    <v-btn text @click="goToContact">Contact</v-btn>
+    <v-btn text href="/">Home</v-btn>
+    <v-btn text href="/portfolio/about">About</v-btn>
+    <v-menu open-on-hover>
+      <template v-slot:activator="{ props }">
+        <v-btn v-bind="props">Projects</v-btn>
+      </template>
+      <v-list>
+        <v-list-item href="/portfolio/work">
+          <v-list-item-title>Work</v-list-item-title>
+        </v-list-item>
+        <v-list-item href="/portfolio/projects">
+          <v-list-item-title>Personal</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+    <v-btn text href="/portfolio/contact">Contact</v-btn>
   </v-app-bar>
 </template>
 
 <script>
-export default {
-  name: "NavigationBar",
-  methods: {
-    goToHome() {
-      this.$router.push({ name: "home" });
-    },
-    goToProjects() {
-      this.$router.push({ name: "projects" });
-    },
-    goToContact() {
-      this.$router.push({ name: "contact" });
-    },
-    goToAbout() {
-      this.$router.push({ name: "about" });
-    },
-  },
-};
+export default {};
 </script>
 
 <style scoped>

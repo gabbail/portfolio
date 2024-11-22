@@ -1,7 +1,7 @@
 <template>
-  <v-carousel height="100hv" cycle :show-arrows="false" hide-delimiters>
+  <v-carousel class="carousel-container" height="100hv" cycle hide-delimiters>
     <v-carousel-item v-for="(img, i) in imgs" :key="i">
-      <v-img :src="img" cover></v-img>
+      <v-img cover :src="img"></v-img>
     </v-carousel-item>
   </v-carousel>
 </template>
@@ -21,4 +21,9 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.carousel-container {
+  height: 100vh; /* Ensures the container takes up the full viewport height */
+  overflow: hidden; /* Prevents scrolling */
+}
+</style>

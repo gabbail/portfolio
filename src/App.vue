@@ -1,10 +1,13 @@
 <template>
   <v-app>
+    <NavigationBar />
     <v-main>
-      <NavigationBar />
       <router-view />
     </v-main>
+    <FooterBar />
   </v-app>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts"></script>
+
+<style></style>
